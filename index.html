@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
+
 <body>
-
-
     <!-- Weather Dashboard Header -->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -15,40 +15,39 @@
         </div>
     </div>
 
-
-
     <!-- Main Content Container -->
     <div class="container-fluid">
-    <!-- Main Content Row -->
-<div class="row">
-    <!-- City Search Bar -->
-<div class="col-3 searchCol">
-    <!-- Search Form with Button -->
-<h3>Search for a city:</h3>
-<div class="input-group mb-4">
-<input type="text" class="form-control" id="cityInput" placeholder="City Name" aria-label="Recipients's username" aria-describedby="button-addon2">
-<div class="input-group-append">
-    <button class="btn btn-outline-primary" type="button" id="citySearchBtn">
-        <img src="Assets/search.png" width="20px"/></button>
-</div>
-</div>
-    <!-- City Table List -->
-<div class="list-group" id="cityList">
-</div>
-</div>
-    <!-- Weather Information Column -->
-    <div class="col-9">
-        <div class="card" style="width: 100%," id="WeatherContainer"></div>
-        <div id="forecastContainer"></div>
+        <!-- Main Content Row -->
+        <div class="row">
+            <!-- City Search Bar -->
+            <div class="col-3 searchCol">
+                <!-- Search Form with Button -->
+                <h3>Search for a city:</h3>
+                <div class="input-group mb-4">
+                    <input type="text" class="form-control" id="cityInput" placeholder="City Name"
+                        aria-label="Recipients's username" aria-describedby="button-addon2" />
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="button" id="citySearchBtn">
+                            <img src="Assets/search.png" width="20px" />
+                        </button>
+                    </div>
+                </div>
+                <!-- City Table List -->
+                <div class="list-group" id="cityList"></div>
+            </div>
+            <!-- Weather Information Column -->
+            <div class="col-9">
+                <div class="card" style="width: 100%" id="WeatherContainer"></div>
+                <div id="forecastContainer"></div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-<footer class="footer mt-auto py-3 text-center">
-    <div class="container">
-        <span class="text-muted">view source code on <a href="https://github.com/ZiWang55/HW6_Weather_Dashboard">Zi Wang's Git Hub</a></span>
-    </div>
-</footer>
- 
-
+    <footer class="footer mt-auto py-3 text-center">
+        <div class="container">
+            <span class="text-muted">view source code on
+                <a href="https://github.com/ZiWang55/HW6_Weather_Dashboard">Zi Wang's Git Hub</a></span>
+        </div>
+    </footer>
 </body>
+
 </html>
