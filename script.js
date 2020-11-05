@@ -18,7 +18,7 @@ function renderCities() {
     );
     a.attr("data-name", cityList[i]);
     a.text(cityList[i]);
-    $("#CityList").prepend(a);
+    $("#cityList").prepend(a);
   }
 }
 
@@ -33,7 +33,7 @@ function initCityList() {
   renderCities();
 }
 
-// This function pull the currenty city into local storage to display the current weather forecast on reload
+// This function pull the current city into local storage to display the current weather forecast on reload
 function initWeather() {
   var storedWeather = JSON.parse(localStorage.getItem("currentCity"));
   if (storedWeather !== null) {
@@ -43,12 +43,6 @@ function initWeather() {
     displayFiveDayForecast();
   }
 }
-
-// This function saves the currently display city to local storage
-// function storeCurrentCity() {
-//   localStorage.setItem("currentCity", JSON.stringify(cityname));
-
-// }
 
 // This function saves the city array to local storage
 function storeCityArray() {
@@ -106,17 +100,17 @@ async function displayWeather() {
   var val =
     date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
   var getCurrentWeatherIcon = response.weather[0].icon;
-  var displayCUrrentWeatherIcon = $(
+  var displayCurrentWeatherIcon = $(
     "<img src = http://openweathermap.org/img/wn/" +
       getCurrentWeatherIcon +
       "@2x.png />"
   );
-  var currentyCityEl = $("<h3 class = 'card-body'>").text(
+  var currentCityEl = $("<h3 class = 'card-body'>").text(
     getCurrentCity + " (" + val + ")"
   );
-  currentyCityEl.append(displayCUrrentWeatherIcon);
-  currentWeatherDiv.append(currentyCityEl);
-  var getTemp = reponse.main.temp.toFixed(1);
+  currentCityEl.append(displayCurrentWeatherIcon);
+  currentWeatherDiv.append(currentCityEl);
+  var getTemp = response.main.temp.toFixed(1);
   var tempEl = $("<p class='card-text'>").text(
     "Temperature: " + getTemp + "° F"
   );
@@ -126,7 +120,7 @@ async function displayWeather() {
     "Humidity: " + getHumidity + "%"
   );
   currentWeatherDiv.append(humidityEl);
-  var getWindSpeed = reponse.wind.speed.toFixed(1);
+  var getWindSpeed = response.wind.speed.toFixed(1);
   var windSpeedEl = $("<p class='card-text'>").text(
     "Wind Speed: " + getWindSpeed + "mph"
   );
@@ -149,9 +143,9 @@ async function displayWeather() {
   var uvNumber = $("<span>");
   if (getUVIndex > 0 && getUVIndex <= 2.99) {
     uvNumber.addClass("low");
-  } else if (getUVIndex >= 3 && getUVIndex < +5.99) {
+  } else if (getUVIndex >= 3 && getUVIndex <= 5.99) {
     uvNumber.addClass("moderate");
-  } else if (getUVIndex >= 6 && getUVIndex < +7.99) {
+  } else if (getUVIndex >= 6 && getUVIndex <= 7.99) {
     uvNumber.addClass("high");
   } else if (getUVIndex >= 8 && getUVIndex <= 10.99) {
     uvNumber.addClass("vhigh");
@@ -177,7 +171,7 @@ async function displayFiveDayForecast() {
     method: "GET",
   });
   var forecastDiv = $("<div id='fiveDayForecast'>");
-  var forecastHeader = $("<h5 class='card-header boarder-secondary'>").text(
+  var forecastHeader = $("<h5 class='card-header border-secondary'>").text(
     "5 Day Forecast"
   );
   forecastDiv.append(forecastHeader);
