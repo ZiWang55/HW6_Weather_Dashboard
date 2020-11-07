@@ -8,6 +8,7 @@ body {
 
 .container-fluid {
     background-color: #e27d60;
+    padding: 40px;
 }
 
 .card {
