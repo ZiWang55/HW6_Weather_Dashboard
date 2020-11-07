@@ -39,7 +39,7 @@ function initWeather() {
   if (storedWeather !== null) {
     cityname = storedWeather;
 
-    displayWeather();
+    displayCurrentWeather();
     displayFiveDayForecast();
   }
 }
@@ -70,7 +70,7 @@ $("#citySearchBtn").on("click", function (event) {
   storeCurrentCity();
   storeCityArray();
   renderCities();
-  displayWeather();
+  displayCurrentWeather();
   displayFiveDayForecast();
 });
 
@@ -82,7 +82,7 @@ $("#cityInput").keypress(function (e) {
 });
 
 // This function runs the Open Weather API AJAX call, displays: current city, weather , 5 day forecast to the DOM
-async function displayWeather() {
+async function displayCurrentWeather() {
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     cityname +
@@ -218,7 +218,7 @@ async function displayFiveDayForecast() {
 // This function is used to pass the city in the history list to the displayWeather function
 function historyDisplayWeather() {
   cityname = $(this).attr("data-name");
-  displayWeather();
+  displayCurrentWeather();
   displayFiveDayForecast();
   console.log(cityname);
 }
