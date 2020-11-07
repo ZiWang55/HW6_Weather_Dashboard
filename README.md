@@ -8,7 +8,7 @@ The use of [OpenWeather API](https://openweathermap.org/api) to retrieve weather
 
 ## Preview
 
-![Gif]()
+![Gif](https://github.com/ZiWang55/HW6_Weather_Dashboard/blob/main/Assets/Weather%20Dashboard.gif?raw=true)
 
 ## Installation
 
@@ -19,5 +19,8 @@ If you would like to contribute please use terminal to gitclone https://github.c
 
 ## W3Validator
 
+[W3 Validator Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fziwang55.github.io%2FHW6_Weather_Dashboard%2F)
+
 ## License
+
 &copy; Zi Wang
